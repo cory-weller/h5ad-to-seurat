@@ -3,13 +3,13 @@ Note that in my case `source myconda` is a script within ${PATH} that initialize
 
 Create conversion (anndata) environment
 ```bash
-mamba create -p envs/convert 'scanpy' 'anndata'
+mamba create -p convert 'scanpy' 'anndata'
 ```
 
 
 Create Seurat5 + BPCells environment
 ```bash
-mamba create -p envs/bpcells 'r-seurat>=5' 'r-remotes' 'hdf5'
+mamba create -p bpcells 'r-seurat>=5' 'r-remotes' 'hdf5'
 mamba activate bpcells/
 Rscript -e 'remotes::install_github("bnprks/BPCells/r")'
 mamba deactivate
