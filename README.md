@@ -1,4 +1,5 @@
 # Converting big anndatas!
+Note that in my case `source myconda` is a script within ${PATH} that initializes conda.
 
 Create conversion (anndata) environment
 ```bash
@@ -8,7 +9,6 @@ mamba create -p envs/convert 'scanpy' 'anndata'
 
 Create Seurat5 + BPCells environment
 ```bash
-source myconda
 mamba create -p envs/bpcells 'r-seurat>=5' 'r-remotes' 'hdf5'
 mamba activate envs/bpcells/
 Rscript -e 'remotes::install_github("bnprks/BPCells/r")'

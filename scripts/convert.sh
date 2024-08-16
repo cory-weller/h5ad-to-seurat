@@ -6,6 +6,7 @@
 #SBATCH --partition quick,norm
 
 source myconda
+
 mamba activate bpcells/
 
 Rscript scripts/convert.R
